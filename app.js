@@ -13,5 +13,15 @@ bot.login(config.token);
 loadCommands(bot);
 loadEvents(bot);
 
+const { Client, GatewayIntentBits, Events } = require('discord.js');
+bot.on(Events.MessageCreate, message => {
+    // Vérifie si le message vient du canal spécifié et ignore les messages du bot
+    if (message.channel.id === 1280502721958383646 && !message.author.bot) {
+        console.log(`Nouveau message de ${message.author.username} dans le canal ${message.channel.name}: ${message.content}`);
 
+        // Vous pouvez traiter le message ici ou l'enregistrer, l'analyser, etc.
+        // Exemple : réponse automatique
+        message.channel.send(`Message reçu : ${message.content}`);
+    }
+});
 
