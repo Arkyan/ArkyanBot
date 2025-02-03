@@ -24,10 +24,10 @@ module.exports = async bot  => {
 
 
     //////////////////////////////////////////////////
-    const TWITCH_CLIENT_ID = '2gryqe8mwkk2vhn1e4m2ypgtg24050';
-    const TWITCH_CLIENT_SECRET = 'sxxerw4iht8ugs2v7imdoln4qdyd2n';
+    const TWITCH_CLIENT_ID = 'ID';
+    const TWITCH_CLIENT_SECRET = 'CLIENTSECRET';
     const TWITCH_USERNAME = 'Arkyan_';
-    const CHANNEL_ID = '870646070055682059'; // ID du canal Discord pour les annonces
+    const CHANNEL_ID = 'ID'; // ID du canal Discord pour les annonces
     // Fonction pour obtenir un token d'accès à l'API Twitch
     async function getTwitchAccessToken() {
     const response = await fetch('https://id.twitch.tv/oauth2/token', {
